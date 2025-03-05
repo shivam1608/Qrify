@@ -15,10 +15,11 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/transparent"
+            android:background="@color/surface_dark"
             app:navigationIcon="@drawable/ic_back"
             app:title="Profile"
-            app:titleTextColor="@android:color/black"/>
+            app:titleTextColor="@android:color/white"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Title"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -37,6 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/blue_700"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
 
@@ -73,6 +75,60 @@
                         android:layout_marginTop="8dp"
                         android:text="user@email.com"
                         android:textColor="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/surface_dark"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Default Highlight Color"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnColorPicker"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginEnd="16dp"
+                            app:icon="@drawable/ic_palette"
+                            app:iconTint="@android:color/white"
+                            app:backgroundTint="@color/blue_500"
+                            app:cornerRadius="24dp"/>
+
+                        <TextView
+                            android:id="@+id/tvSelectedColor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Default: #22EB5D"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

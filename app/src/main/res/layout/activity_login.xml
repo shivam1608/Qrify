@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,53 +8,77 @@
     app:cardCornerRadius="12dp"
     app:cardElevation="6dp"
     android:layout_gravity="center"
-    android:backgroundTint="@android:color/black">
+    android:backgroundTint="@color/surface_dark">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        android:background="@android:color/black"
+        android:background="@color/surface_dark"
         android:layout_gravity="center"
         android:gravity="center">
 
-        <EditText
-            android:id="@+id/emailInput"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to QRifyCS"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:hint="Email"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="15dp"
-            android:padding="15dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:focusable="true"/>
+            app:hintTextColor="@color/blue_300"
+            app:boxStrokeColor="@color/blue_500"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
-            android:id="@+id/passwordInput"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:hint="Password"
-            android:inputType="textPassword"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"
-            android:layout_marginBottom="25dp"
-            android:padding="15dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:focusable="true"/>
+            app:hintTextColor="@color/blue_300"
+            app:boxStrokeColor="@color/blue_500"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/blue_300"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <!-- Button with Material Green -->
-        <Button
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:inputType="textPassword"
+                android:padding="15dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
             android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"
-        android:layout_marginTop="20dp"
-        android:padding="15dp"/>
+            android:backgroundTint="@color/blue_500"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            app:cornerRadius="8dp"/>
 
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>
