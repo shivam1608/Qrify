@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scanned QR Data will appear here"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="2"
+        android:padding="10dp"
+        android:layout_gravity="bottom|start">
+
+        <Button
+            android:id="@+id/btnPresent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark Present"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:layout_columnSpan="2"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/red_400"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:layout_columnSpan="2"/>
+    </GridLayout>
+
+</FrameLayout>

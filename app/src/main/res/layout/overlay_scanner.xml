@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- Semi-transparent black background (50% opacity) covering the whole screen -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"/> <!-- 50% opacity black (hex: #80000000) -->
+
+    <!-- Transparent "hole" inside the border (i.e., the camera view area) -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+
+    <!-- The scanner border with visible area inside -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/scanner_border"
+        android:layout_gravity="center" />
+
+</FrameLayout>
