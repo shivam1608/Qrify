@@ -7,7 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static final String BASE_URL = "https://fundamental-esther-shivzee-82bfa763.koyeb.app/";
+    private static final String BASE_URL = "https://qrify.kush.in/";
 
     private static Retrofit retrofit = null;
 
